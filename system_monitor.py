@@ -409,6 +409,7 @@ class NetworkCollector:
         }
         self._last_io = current
         self._last_time = now
+
         return rates
 
 
