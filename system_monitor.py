@@ -57,7 +57,6 @@ rich_module = ensure_package("rich", REQUIRED_PACKAGES["rich"])
 ensure_package("tabulate", REQUIRED_PACKAGES["tabulate"])
 
 if rich_module is None:
-    print
     raise SystemExit("Required package 'rich' could not be installed. Please run: python -m pip install rich")
 
 from rich import box
