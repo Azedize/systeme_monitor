@@ -1,0 +1,18 @@
+﻿python : Traceback (most recent call last):
+Au caractère Ligne:1 : 46
++ ... d:\Petit projet python'; python system_monitor.py --once *>&1 | Out-F ...
++                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "system_monitor.py", line 1272, in <module>
+    main()
+  File "system_monitor.py", line 1268, in main
+    Dashboard(refresh_rate=args.refresh).run(once=args.once or bool(args.export), report_format=args.export)
+  File "system_monitor.py", line 1190, in run
+    collected = self.collect_all()
+  File "system_monitor.py", line 1116, in collect_all
+    sensors = self.sensor_collector.collect()
+  File "system_monitor.py", line 434, in collect
+    sensors["temperatures"] = safe_call(psutil.sensors_temperatures, default={}) or {}
+AttributeError: module 'psutil' has no attribute 'sensors_temperatures'
